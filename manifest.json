@@ -1,0 +1,23 @@
+{
+  "name": "Revalize Assistant",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "Experimental client integration and event automation.",
+  "icons": {
+    "128": "revalize-128.png"
+  },
+  "action": {
+    "default_icon": "revalize-128.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [ {
+    "css": [ "rev.css" ],
+    "js": [ "rev.js" ],
+    "matches": [ "https://master.configureonedemo.com/*" ],
+    "all_frames": true
+  }],
+  "web_accessible_resources": [{
+    "resources": [ "/src/*" ],
+    "matches": [ "https://master.configureonedemo.com/*" ]
+  }]
+}
